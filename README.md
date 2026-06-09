@@ -6,9 +6,9 @@ I'm not a classical software engineer. I design the system, direct AI tools to b
 
 ## Running right now
 
-- **A 800+ product e-commerce storefront(s)** where products, listings, pricing, and SEO are built by pipelines, not by hand. Shopify, Etsy, and Printify, publishing on a retry system that knows every way the APIs fail.
+- **An e-commerce storefront with hundreds of live products** where the products, listings, pricing, and SEO are built by pipelines, not by hand. Shopify, Etsy, and Printify, publishing on a retry system that knows every way the APIs fail.
 
-- **An insurance broker platform** with an encrypted document vault, retention scoring, and commission tracking. 292 tests pass before anything ships.
+- **An insurance broker platform** with an encrypted document vault, retention scoring, and commission tracking. Hundreds of tests pass before anything ships.
 
 - **A content engine** that renders a finished short-form video in one command. Voiceover with directed emotion, auto-sourced footage, synced captions, cover options.
 
