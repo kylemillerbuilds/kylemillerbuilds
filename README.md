@@ -38,6 +38,7 @@ Repos here are pieces of that system, extracted and cleaned up. The business log
 | Repo | What it does |
 |------|-------------|
 | [agent-guardrails](https://github.com/kylemillerbuilds/agent-guardrails) | Fail-open safety hook for AI coding agents — 7 battle-tested rules + 61-case regression matrix |
+| [safe-url-fetch](https://github.com/kylemillerbuilds/safe-url-fetch) | The guard in front of every server-side URL fetch. Blocks SSRF with a scheme allowlist, an all-IPs check, and per-hop redirect re-validation. |
 | [printify-publish-queue](https://github.com/kylemillerbuilds/printify-publish-queue) | Hardened Printify publish flow — encodes the full failure taxonomy so bulk publishes never create duplicates |
 | [pixel-sprite-animator](https://github.com/kylemillerbuilds/pixel-sprite-animator) | One 32×32 idle sprite in → complete animated character out. Zero AI at runtime. |
 
