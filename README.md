@@ -1,4 +1,4 @@
-# Kyle Miller
+# Kyle M
 
 **Founder @ [Themis Foundry](https://themisfoundry.com)** · Building AI-powered businesses and the automation engines that run them.
 
