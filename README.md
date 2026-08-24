@@ -1,46 +1,76 @@
-# Kyle M
+# Kyle Miller
 
-**Founder @ [Themis Foundry](https://themisfoundry.com)** · Building AI-powered businesses and the automation engines that run them.
+I build software by directing AI agents rather than by typing it myself. That puts my work in
+architecture, judgment, and verification, and the last one is where most of what I know came from.
+Agents report success constantly while shipping work that is wrong, so nothing I run is trusted on
+its own word.
 
----
+I co-founded **Tritan**, a print-on-demand art brand selling on Shopify and Etsy, and I own the
+technical side of it. I designed and operate the pipeline that generates the artwork, runs it
+through automated quality gates, creates the products through the Printify API, assembles the
+mockups, writes the listing SEO, and publishes to both channels.
 
-### 🛠️ Open Source Libraries
-Production-grade utilities extracted from my active operating setup.
+**Themis Foundry LLC** is my own company. Its first product is Hermes, a retention platform for
+independent insurance brokers that turns unstructured carrier documents into structured, queryable
+client data. FastAPI and Alpine, built and pre-launch.
 
-| Project | Description | Stack / Badges |
-| :--- | :--- | :--- |
-| **[agent-guardrails](https://github.com/kylemillerbuilds/agent-guardrails)** | Safety rails for AI coding agents: a fail-open PreToolUse hook for Claude Code. | ![Shell](https://img.shields.io/badge/Shell-bash-4EAA25?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square) |
-| **[pixel-sprite-animator](https://github.com/kylemillerbuilds/pixel-sprite-animator)** | Deterministic 32x32 pixel animation transforms (articulated walks, internal breathing) without AI drift. | ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square) |
-| **[printify-publish-queue](https://github.com/kylemillerbuilds/printify-publish-queue)** | A hardened publish state machine for the Printify API that eliminates duplicate listings. | ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square) |
-| **[safe-url-fetch](https://github.com/kylemillerbuilds/safe-url-fetch)** | SSRF-safe URL fetcher with scheme allowlists, global-IP resolution, and per-hop redirect validation. | ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square) |
+Before this I sold solar door to door and built an independent health insurance book from zero
+clients. I handed the book off in July 2026 to build full time.
 
----
+I am looking for a role on a small, early-stage team where building with AI agents is just how the
+work gets done rather than something novel.
 
-### 🚀 Proprietary Showcases
-Systems designed, built, and operated by me.
+## Repos worth opening
 
-#### **Tritan — Automated POD Storefront**
-[![Tritan](https://raw.githubusercontent.com/kylemillerbuilds/tritan-storefront/main/assets/hero.png)](https://shoptritan.com)
-*   **What it is**: Dog breed art brand live on Shopify, Etsy, TikTok Shop, Instagram, Pinterest, and Google.
-*   **The Engine**: An AI-assisted design pipeline and automated publishing queue that publishes products across hundreds of variations.
-*   → [shoptritan.com](https://shoptritan.com) · [Architecture & Showcase](https://github.com/kylemillerbuilds/tritan-storefront)
+Ordered by what they show, not by stars.
 
-#### **Hermes — Broker OS**
-[![Hermes](https://raw.githubusercontent.com/kylemillerbuilds/hermes-broker-os/main/assets/landing.png)](https://themisfoundry.com)
-*   **What it is**: SaaS platform built for independent insurance brokers.
-*   **The Engine**: Automated client tracking, AI-driven coaching on book data, retention workflows, and a per-broker memory layer (Atlas).
-*   → [Themis Foundry](https://themisfoundry.com) · [Architecture & Showcase](https://github.com/kylemillerbuilds/hermes-broker-os)
+**[apollo-contract-scan](https://github.com/kylemillerbuilds/apollo-contract-scan)**
+A pay-per-call Solidity risk scan that sells itself to other agents over x402 on Base. The
+deployment holds no signing keys and no wallet, so it cannot custody or move money. It can only
+receive. Read [GROWTH.md](https://github.com/kylemillerbuilds/apollo-contract-scan/blob/main/GROWTH.md)
+before the code. It is the honest ledger for the project and it records the mistakes as carefully as
+the milestones: the audit that concluded the service was never listed after reading page one of a
+14,810 entry paginated index, and the on-chain sweep that reported zero transfers because the RPC
+was quietly returning 403 and a positive control was the only thing that caught it.
 
-#### **Olympus — AI Agent Platform**
-*   **What it is**: The underlying orchestration and automation layer running beneath both Tritan and Hermes. It handles the heavy lifting of inventory sync, marketing outreach, and data intelligence.
+**[agent-guardrails](https://github.com/kylemillerbuilds/agent-guardrails)**
+The hook that sits between my agents and my working tree. Seven rules, each one added after
+something broke, plus a regression matrix that has to run green before the guard is edited. It
+fails open on purpose. A guard that can freeze a parallel session gets deleted within a week, and a
+guard that only ever blocks explicit matched patterns gets to stay forever.
 
----
+**[printify-publish-queue](https://github.com/kylemillerbuilds/printify-publish-queue)**
+Printify's publish endpoint returns 200 immediately and then syncs later through a queue you cannot
+see, which means a product that is merely slow and a product that has silently died look identical
+for several minutes. Retrying is the natural move and it is what creates duplicate listings. This
+encodes the difference, and the cost of learning it.
 
-### 🧰 Tech & Capabilities
-*   **Languages**: Python, Bash, JavaScript/HTML/CSS, SQL
-*   **Infrastructure & Tools**: Cloudflare (Workers, Pages, D1, KV), Shopify API, Printify API, Git, Docker
-*   **Specialties**: System Architecture, E-commerce Automation, AI Orchestration, Security Hardening
+**[safe-url-fetch](https://github.com/kylemillerbuilds/safe-url-fetch)**
+The guard I put in front of every server-side fetch of a URL that a person typed. Scheme allowlist,
+every resolved IP checked against the private ranges, and redirects revalidated on each hop. The
+tests run without touching the network.
 
----
+**[pixel-sprite-animator](https://github.com/kylemillerbuilds/pixel-sprite-animator)**
+One 32x32 idle sprite in, a complete animated character out, with zero AI at runtime. I built the
+image-model version first and spent most of its code fighting identity drift. Replacing the model
+with a rig read better, because at that resolution a walk cycle is small enough to describe exactly.
 
-[LinkedIn](https://linkedin.com/in/kylemillerfl) · [Upwork](https://upwork.com/freelancers/kylemillerbuilds) · [Themis Foundry](https://themisfoundry.com)
+## The thing I keep relearning
+
+A check that cannot say "I could not look" will say "pass."
+
+I found that out on the pipeline above. Part of it decides which photo shows up as a product's main
+image, and I had a verifier that pulled each product back down off the live site and compared the
+image against what I meant to publish. It came back clean across four product lines. Then I opened a
+real product page myself and saw a Christmas living room sitting behind a poster we sell year round.
+
+The verifier was reading the same field the writer had just set, so it was really asking whether I
+put a thing where I put it, and the answer was always going to be yes.
+
+So I changed how checking works here. A check has to look at something different from whatever the
+writer touched, ideally the thing the customer sees. It has to fail on purpose before I trust it,
+because if I have never watched it turn red I do not know that it works. And it has to be able to
+report "could not check" as its own answer, separate from "passed," because those two were being
+treated the same and that is how the bad work got through.
+
+Reach me at kyle@themisfoundry.com · [LinkedIn](https://linkedin.com/in/kylemillerfl)
