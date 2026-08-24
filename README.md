@@ -15,7 +15,7 @@ independent insurance brokers that turns unstructured carrier documents into str
 client data. FastAPI and Alpine, built and pre-launch.
 
 Before this I sold solar door to door and built an independent health insurance book from zero
-clients. I handed the book off in July 2026 to build full time.
+clients. I handed the book off in August 2026 to build full time.
 
 I am looking for a role on a small, early-stage team where building with AI agents is just how the
 work gets done rather than something novel.
