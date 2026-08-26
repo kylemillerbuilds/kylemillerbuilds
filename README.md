@@ -24,6 +24,9 @@ work gets done rather than something novel.
 
 Ordered by what they show, not by stars.
 
+**[momus-agent-firewall](https://github.com/kylemillerbuilds/momus-agent-firewall)**
+An adversarial audit layer designed to sit in front of agentic systems. Rather than trying to build perfectly secure agents, Momus treats the agent itself as an untrusted actor, validating its tool calls and outputs against strict, fail-closed boundaries before they execute. It's the "muscle" that enforces the rules when autonomous execution meets sensitive infrastructure.
+
 **[apollo-contract-scan](https://github.com/kylemillerbuilds/apollo-contract-scan)**
 A pay-per-call Solidity risk scan that sells itself to other agents over x402 on Base. The
 deployment holds no signing keys and no wallet, so it cannot custody or move money. It can only
