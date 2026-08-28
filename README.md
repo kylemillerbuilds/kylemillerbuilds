@@ -25,7 +25,13 @@ work gets done rather than something novel.
 Ordered by what they show, not by stars.
 
 **[momus-agent-firewall](https://github.com/kylemillerbuilds/momus-agent-firewall)**
-An adversarial audit layer designed to sit in front of agentic systems. Rather than trying to build perfectly secure agents, Momus treats the agent itself as an untrusted actor, validating its tool calls and outputs against strict, fail-closed boundaries before they execute. It's the "muscle" that enforces the rules when autonomous execution meets sensitive infrastructure.
+A deterministic scanner for AI-generated diffs. It came out of a payment address in one of my
+own projects that carried a code comment asserting it was my verified wallet. It was not mine, and
+the comment stood for five weeks past two reviews, because every check that looked at it read the
+comment. When an agent later changed that address, my own audit called the change unauthorized and
+published that — and I was wrong the second time too. Both halves of that episode produced a
+confident, well-cited, wrong claim about who owned an address. So Momus checks values against an
+allowlist a human maintains, never against the justification sitting next to them in the diff.
 
 **[apollo-contract-scan](https://github.com/kylemillerbuilds/apollo-contract-scan)**
 A pay-per-call Solidity risk scan that sells itself to other agents over x402 on Base. The
@@ -37,9 +43,9 @@ the milestones: the audit that concluded the service was never listed after read
 was quietly returning 403 and a positive control was the only thing that caught it.
 
 **[agent-guardrails](https://github.com/kylemillerbuilds/agent-guardrails)**
-The hook that sits between my agents and my working tree. Seven rules, each one added after
-something broke, plus a regression matrix that has to run green before the guard is edited. It
-fails open on purpose. A guard that can freeze a parallel session gets deleted within a week, and a
+The hook that sits between my agents and my working tree. Nine rules, each one added after
+something broke, plus a regression matrix that has to run green before the guard is edited. Seven
+fail open on purpose; two fail closed, because they face injection rather than my own clumsiness. A guard that can freeze a parallel session gets deleted within a week, and a
 guard that only ever blocks explicit matched patterns gets to stay forever.
 
 **[printify-publish-queue](https://github.com/kylemillerbuilds/printify-publish-queue)**
